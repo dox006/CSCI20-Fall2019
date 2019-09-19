@@ -1,0 +1,46 @@
+using System;
+public class decisions {
+  public static void Main (string[] args){
+    int animal = int.Parse(Console.ReadLine());
+  Console.WriteLine("Think of an animal, and I will guess it");
+  Console.WriteLine("Does your animal breathe air? 1 for yes, 2 for no");
+      switch (animal)
+      {
+
+        case 2:
+          Console.WriteLine("You are a fish");
+          break;
+        case 1:
+          int eggs = int.Parse(Console.WriteLine("Do you lay eggs?"));
+            switch (eggs)
+            {
+              case 2:
+                Console.WriteLine("You are a mammal");
+                break;
+              case 1:
+                int feathers = int.Parse(Console.WriteLine("Do you have feathers?"));
+                  switch (feathers)
+                    {
+                      case 2:
+                        Console.WriteLine("You are a reptile");
+                        break;
+                      case 1:
+                        int fly = int.Parse(Console.WriteLine("Can you fly?"));
+                          switch (fly)
+                        {
+                          case 1:
+                            Console.WriteLine("You are a bird");
+                            break;
+                          case 2:
+                            Console.WriteLine("You are a marsupial");
+                            break;
+                        }
+                    }
+
+
+            }
+
+      }
+
+  }
+}
