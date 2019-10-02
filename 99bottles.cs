@@ -8,11 +8,12 @@ namespace Loop
   {
     public static void Main(string[]args)
     {
-      int i
-      int bottles=int.Parse(Console.ReadLine("How many lines do you want to sing?"))
-      for (i=1 ; a>=bottles ; i--) //define i, define i's end value, define i mutation, this time declining
+      int i;
+      Console.WriteLine("How many lines do you want to sing?");
+      int bottles=int.Parse(Console.ReadLine());
+      for (i=1 ; i>=bottles ; i--) //define i, define i's end value, define i mutation, this time declining
       {
-        Console.Write({bottles}+"bottles of beer on the wall"+{bottles}"of beer, take one down pass it around");
+        Console.Write((bottles)+"bottles of beer on the wall"+(bottles)+"of beer, take one down pass it around");
       }
     }
   }

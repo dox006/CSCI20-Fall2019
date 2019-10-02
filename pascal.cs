@@ -8,8 +8,9 @@ namespace Loop
   {
     public static void Main(string[]args)
     {
-      int i, val=1, bank, j;
-      int rows=int.Parse(Console.ReadLine("Declare number of rows"));
+      int i, val=1, blank, j;
+      Console.WriteLine("Declare number of rows");
+      int rows=int.Parse(Console.ReadLine());
       for (i=0; i<rows; i++){ //declares how many rows the triangle will have
         for (blank=1; blank<=rows-i; blank++)
           Console.Write("");
