@@ -2,80 +2,28 @@
 //October 9 2019
 //Create a game of pig using random number generation
 using System;
-using Random;
-class turn1
+class MethodDemo
 {
- public static void Main()
- {
-  Random rnd = new Random();
-  int  dice = rnd.Next(1, 7);
-  int score;
-  int humanTurn;
-  int turnScore;
-  humanTurn(score)
+  static int doit ()
   {
-    while 0 <= (score+turnScore) <= 100
-    {
-      Console.WriteLine("Your score is",score+turnScore);
-      Console.WriteLine("Would you like to roll again, (y)es or (n)0");
-      playerAnswer=Console.ReadLine();
-      if playerAnswer != "y"
-      {
-        return False;
-      }
-      Console.WriteLine(dice);
-      if dice == 1
-      {
-        turnScore = 0;
-        return False;
-      }
-      turnScore +- dice;
-    Console.WriteLine("Your score is"score+turnScore);
-    Console.WriteLine("It's the other player's turn");
-    return turnScore;
-    }
-    int score1;
-    score1 = 0;
-    while score1 < 100
-    {
-      score1 += humanTurn(score1);
-    }
+    Random random = new Random(); //Creating a method for rolling the dice and displaying the end result
+    int dice = random.Next(1, 7);
+    Console.WriteLine(dice);
+    return dice;
   }
-  int humanTurn2;
-  int turnScore2;
-  int score2;
-  humanTurn2(score2)
+  static int turn (int i) //Method for turn order
   {
-    while 0 <= (score2+turnScore2) <= 100
-    {
-      Console.WriteLine("Your score is",score2+turnScore2);
-      Console.WriteLine("Would you like to roll again, (y)es or (n)0");
-      playerAnswer=Console.ReadLine();
-      if playerAnswer != "y"
-      {
-        return False;
-      }
-      Console.WriteLine(dice);
-      if dice == 1
-      {
-        turnScore = 0;
-        return False;
-      }
-      turnScore +- dice;
-    Console.WriteLine("Your score is"score+turnScore);
-    Console.WriteLine("It's the other player's turn");
-    return turnScore;
-    }
-    int score1;
-    score1 = 0;
-    while score1 < 100
-    {
-      score1 += humanTurn(score1);
-    }
+    i = i + 1;
+    return i;
   }
- }
- if score1 < turnScore2{
-   Console.WriteLine("Player 2 wins")
-   else Console.WriteLine("Player 1 wins")
- }
+  public static void Main ()
+  {
+   int res;
+   res = turn(0); //Determines we start at turn 0+1
+   Console.WriteLine("You rolled a : ");
+   doit();
+   Console.WriteLine(res + "turns have passed");
+   Console.WriteLine("Roll again? (y)es or (n)o");
+
+  }
 }
